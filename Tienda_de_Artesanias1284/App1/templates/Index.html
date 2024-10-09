@@ -1,0 +1,26 @@
+{$load static$}
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tienda de Artesanias</title>
+    <link rel="stylesheet" href="{static estilos.css}">
+</head>
+<body>
+    <h1>Hola comunidad</h1>
+    <br>
+    <p>Hola como estan, epero esten muy bien</p>
+
+     <hr>
+ 
+     <ul>
+        {% for i in objeto.provedor_set.all %}
+        
+         <li><a href="provedor/{{i.id_provedor}}" {{i.id_provedor}} ></a></li>
+     </ul>
+     {% end for %}
+
+    <script> src="script.js" </script>
+</body>
+</html>
